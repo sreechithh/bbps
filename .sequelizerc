@@ -1,0 +1,19 @@
+const path = require('path');
+const fs = require('fs')
+
+const ensureDirSync = dir => {
+  if (!fs.existsSync(dir)){
+    fs.mkdirSync(dir, { recursive: true });
+  }
+};
+
+ensureDirSync(path.resolve('controllers'));
+ensureDirSync(path.resolve('middleware'));
+ensureDirSync(path.resolve('routes'));
+
+module.exports = {
+  config: path.resolve('config', 'database.js'),
+  'models-path': path.resolve('db', 'models'),
+  'seeders-path': path.resolve('db', 'seeders'),
+  'migrations-path': path.resolve('db', 'migrations'),
+};
