@@ -47,6 +47,12 @@ module.exports = [
             'no-extra-semi': 'error', // Disallow unnecessary semicolons
             'no-unreachable-loop': 'error', // Disallow loops with a body that allows for loop exit
             'no-constant-condition': 'error', // Disallow constant conditions in loop conditions
+
+
+            "no-whitespace-before-property": "error",
+            "space-in-parens": ["error", "never"],
+            "object-curly-spacing": ["error", "never"],
+            "array-bracket-spacing": ["error", "never"]
         },
     },
 ];

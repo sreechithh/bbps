@@ -2,12 +2,12 @@ import fs from 'fs';
 
 module.exports = {
     development: {
-        username: 'root1',
-        password: 'root',
-        database: 'mnc',
-        host: '127.0.0.1',
-        port: 3306,
-        dialect: 'mysql',
+        username: process.env.DB_USERNAME,
+        password: process.env.DB_PASSWORD,
+        database: process.env.DATABASE,
+        host: process.env.DB_HOST,
+        port: process.env.DB_PORT,
+        dialect: process.env.DB_DIALECT,
         dialectOptions: {
             bigNumberStrings: true,
         },
